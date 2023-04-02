@@ -1,4 +1,6 @@
 # API Yatube
+####Author: Batiskaf/Encoded
+#### Technologies: Django ORM, Django REST
 
 Проект **API Yatube** позволяет отправлять запросы к сайту **YaTube**,
 при этом не находясь  на нём.
@@ -9,20 +11,35 @@
 
 Чтобы развернуть проект вам нужно:
 
-1. Развернуть виртуальное окружение.
-```bash
-    py -3.9 -m venv venv #для Windows
-    python -m venv venv #для MAC
-```
-2. Установить зависимости.
+**1. Развернуть и активировать виртуальное окружение.**
+
+
+   - Для Windows
+   ```bash
+      py -3.9 -m venv venv
+      source venv/Scripts/activate
+   ```
+   - Для MAC и Linux
+   ```bash
+      python -m venv venv 
+      source venv/bin/activate
+   ```
+**2. Установить зависимости.**
 ````bash
     pip install  -r requirements.txt
 ````
-3. Запустить проект, перед этим перейти в нужную деррикторию.
+**3. Сделать и применить миграции**
+   ```bash
+      cd yatube_api
+      python manage.py makemigrations
+      python manage.py migrate
+   ```
+**4. Запустить проект.**
 ```bash
-    cd yatube_api
     python manage.py runserver
 ```
+
+## Запросы
 
 Чтобы сделать запросы через, например, **PostMan**
 вам нужно зарегестрировать пользователя, 
