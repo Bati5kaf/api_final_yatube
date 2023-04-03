@@ -31,7 +31,6 @@
 **3. Сделать и применить миграции**
    ```bash
       cd yatube_api
-      python manage.py makemigrations
       python manage.py migrate
    ```
 **4. Запустить проект.**
